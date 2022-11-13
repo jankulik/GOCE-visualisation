@@ -1,0 +1,73 @@
+<html>
+	<head>
+		<title>GOCE</title>
+		<style>
+			#canvas1 {
+			    background-color: white;
+			    width: 48.5vw;
+			    height: 48.5vw;
+			    border: 1px solid black;
+			    padding: 0px;
+			    position: static;
+			    top: 1vw;
+			    left: 1vw;
+			    float: left;
+			}
+
+			#canvas2 {
+			    background-color: white;
+			    width: 48.5vw;
+			    height: 48.5vw;
+			    border: 1px solid black;
+			    padding: 0px;
+			    position: static;
+			    top: 1vw;
+			    right: 1vw;
+			    float: right;
+			}
+
+			.column {
+				flex: 50%;
+				padding: 5px;
+	        }
+
+	        .container {
+				display: flex;
+	        }
+
+			.center {
+				display: block;
+				margin-top: 10px;
+				margin-left: auto;
+				margin-right: auto;
+				width: 50%;
+			}
+		</style>
+	</head>
+	<body>
+		<center>
+	    <h1>Animated tracking losses map</h1>
+	    <p>Models can be controlled by dragging</p>
+	    <button id="toggle_btn" onclick="clicked()">Pause autorotation</button>
+		<!-- <img src="./assets/colorbar.jpeg" alt="colorbar" class="center"> -->
+
+	    <div class="container">
+	        <div class="column">
+	            <b>Primary receiver</b>
+	        </div>
+	        <div class="column">
+	            <b>Redundant receiver</b>
+			</div>
+	    </div>
+		</center>
+
+		<div id="canvas1"></div>
+		<div id="canvas2"></div>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/87/three.min.js"></script>
+		<script src="./assets/OrbitControls.js"></script>
+		<script src="./assets/OBJLoader.js"></script>
+		<script src="./assets/MTLLoader.js"></script>
+		<script src="./scripts.js"></script>
+	</body>
+</html>
